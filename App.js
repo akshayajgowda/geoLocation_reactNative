@@ -9,24 +9,13 @@
 import React, { Component } from "react";
 import { Platform, StyleSheet, Text, View } from "react-native";
 // import AddItem from './src/components/additem';
-import Login from "./src/components/login";
-import Register from "./src/components/register";
+// import Login from "./src/pages/login";
+// import Register from "./src/pages/register";
+import Routerconfig from "./src/routes/appRouter";
 
-const instructions = Platform.select({
-  ios: "Press Cmd+R to reload,\n" + "Cmd+D or shake for dev menu",
-  android:
-    "Double tap R on your keyboard to reload,\n" +
-    "Shake or press menu button for dev menu"
-});
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Register />
-      </View>
-    );
+    return <Routerconfig />;
   }
 }
 
